@@ -99,7 +99,7 @@ module.exports.enableVectorTiles = function () {
     availableTileLayers["Omniscale Dev"] = omniscaleGray;
 
     require('leaflet.vectorgrid');
-    var vtLayer = L.vectorGrid.protobuf("/mvt/{z}/{x}/{y}.mvt?details=max_speed&details=road_class&details=road_environment", {
+    var vtLayer = L.vectorGrid.protobuf("/mvt/{z}/{x}/{y}.mvt?details=max_speed&details=road_class&details=road_environment&details=military_id&details=province_id&details=district_id&details=commune_id", {
       rendererFactory: L.canvas.tile,
       maxZoom: 20,
       minZoom: 10,
